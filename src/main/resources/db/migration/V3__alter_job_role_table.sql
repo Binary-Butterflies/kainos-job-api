@@ -1,6 +1,6 @@
 CREATE TABLE status (
     statusId INT auto_increment,
-    statusName VARCHAR(128) NOT NULL,
+    statusName VARCHAR(128) NOT NULL UNIQUE,
     CONSTRAINT pk_status PRIMARY KEY (statusId)
 );
 

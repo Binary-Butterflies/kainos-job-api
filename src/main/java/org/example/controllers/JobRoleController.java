@@ -44,7 +44,7 @@ public class JobRoleController {
             response = JobRoleResponse[].class
     )
     public Response getJobRoles() {
-        LOGGER.debug("/job-roles hit");
+        LOGGER.debug("Entering Job Roles Endpoint");
         try {
             LOGGER.info("Returning job roles");
             return Response.ok()
@@ -68,7 +68,7 @@ public class JobRoleController {
             response = JobRoleDetailedResponse.class
     )
     public Response getJobRoleById(@PathParam("id") final int id) {
-        LOGGER.debug("/job-roles/{} hit", id);
+        LOGGER.debug("Entering Job Role {} Endpoint", id);
         try {
             return Response.ok()
                     .entity(jobRoleService.getJobRoleById(id))

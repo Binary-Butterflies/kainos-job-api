@@ -41,6 +41,8 @@ public class JobRoleService {
         if (jobRole == null) {
             throw new DoesNotExistException(Entity.JOBROLE);
         }
+        LOGGER.debug("Job Role found successfully: {}", jobRole);
+
         LOGGER.debug("Mapping JobRole to JobRoleDetails");
         return JobRoleMapper.mapJobRoleToJobRoleDetails(jobRole);
     }
