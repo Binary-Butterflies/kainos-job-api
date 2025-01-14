@@ -6,7 +6,6 @@ import org.example.TestApplication;
 import org.example.TestConfiguration;
 import org.example.exceptions.InvalidException;
 import org.example.models.JobRole;
-import org.example.services.AuthService;
 import org.example.utils.TestAuthUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -43,4 +42,5 @@ public class JobRoleIntegrationTest {
 
         Assertions.assertFalse(response.isEmpty());
     }
+
 }
