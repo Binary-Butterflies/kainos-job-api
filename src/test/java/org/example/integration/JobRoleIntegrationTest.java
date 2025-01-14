@@ -6,7 +6,6 @@ import org.example.TestApplication;
 import org.example.TestConfiguration;
 import org.example.exceptions.InvalidException;
 import org.example.models.JobRole;
-import org.example.services.AuthService;
 import org.example.utils.TestAuthUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -18,7 +17,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.sql.SQLException;
 import java.util.List;
-import javax.ws.rs.core.Response;
 
 @ExtendWith(DropwizardExtensionsSupport.class)
 public class JobRoleIntegrationTest {

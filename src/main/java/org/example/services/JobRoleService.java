@@ -35,7 +35,7 @@ public class JobRoleService {
 
     public JobRoleDetailedResponse getJobRoleById(final int id)
             throws SQLException, DoesNotExistException {
-        LOGGER.info("Getting job role with matching inputted id");
+        LOGGER.info("Getting job role with matching inputted id: {}", id);
         JobRole jobRole = jobRoleDao.getJobRoleById(id);
 
         if (jobRole == null) {
