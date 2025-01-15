@@ -1,6 +1,7 @@
 package org.example;
 
 import io.dropwizard.Application;
+import io.dropwizard.auth.Auth;
 import io.dropwizard.auth.AuthDynamicFeature;
 import io.dropwizard.auth.AuthValueFactoryProvider;
 import io.dropwizard.auth.oauth.OAuthCredentialAuthFilter;
@@ -11,6 +12,7 @@ import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 import org.example.auth.JwtAuthenticator;
 import org.example.auth.RoleAuthoriser;
 import org.example.controllers.AuthController;
+import org.example.controllers.JobRoleApplicationController;
 import org.example.controllers.JobRoleController;
 import org.example.controllers.TestController;
 import org.example.daos.AuthDao;
@@ -51,6 +53,8 @@ public class TestApplication extends Application<TestConfiguration> {
                 new JobRoleService(new JobRoleDao())));
         environment.jersey()
                 .register(new AuthController(authService));
+        environment.jersey()
+                .register(new JobRoleApplicationController());
     }
 
     AuthService initialiseAuthService(final Environment environment) {
